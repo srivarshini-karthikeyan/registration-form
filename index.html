@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCraft Academy Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Registration Form -->
+        <div id="registrationSection">
+            <div class="header">
+                <h1>CodeCraft Academy Registration</h1>
+                <p>Join our developer community today! Already have an account? <a href="#">Sign in</a></p>
+            </div>
+
+            <form id="registrationForm" class="form-container">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName" class="required">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                        <div class="error-message" id="fullNameError">Please enter your full name</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username" class="required">Username</label>
+                        <input type="text" id="username" name="username" required>
+                        <div class="error-message" id="usernameError">Username must be 4-20 characters</div>
+                        <div class="success-message" id="usernameSuccess">Username available</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error-message" id="emailError">Please enter a valid email address</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="required">Password</label>
+                        <div class="password-container">
+                            <input type="password" id="password" name="password" required>
+                            <span class="toggle-password" id="togglePassword">👁️</span>
+                        </div>
+                        <div class="password-strength">
+                            <div class="password-strength-bar" id="passwordStrength"></div>
+                        </div>
+                        <div class="error-message" id="passwordError">Password must be at least 8 characters</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword" class="required">Confirm Password</label>
+                        <div class="password-container">
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <span class="toggle-password" id="toggleConfirmPassword">👁️</span>
+                        </div>
+                        <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <div class="error-message" id="phoneError">Please enter a valid phone number</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="other" name="gender" value="other">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentId">Student ID / Roll Number</label>
+                        <input type="text" id="studentId" name="studentId">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="department">Department / Course / Year</label>
+                        <input type="text" id="department" name="department">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institution">Institution Name</label>
+                        <input type="text" id="institution" name="institution">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country / City</label>
+                        <input type="text" id="country" name="country">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profilePicture">Profile Picture (Upload)</label>
+                        <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                        <img id="imagePreview" class="preview-image" alt="Profile picture preview">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="captcha" class="required">Captcha</label>
+                        <div class="captcha-container">
+                            <div class="captcha-text" id="captchaText"></div>
+                            <button type="button" class="refresh-captcha" id="refreshCaptcha">Refresh</button>
+                        </div>
+                        <input type="text" id="captcha" name="captcha" placeholder="Enter the captcha text" required>
+                        <div class="error-message" id="captchaError">Captcha does not match</div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms" class="required">I agree to the Terms & Conditions</label>
+                        </div>
+                        <div class="error-message" id="termsError">You must agree to the terms</div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter (optional)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Create Account🚀</button>
+
+                <div class="form-footer">
+                    <p>By creating an account, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Confirmation Page -->
+        <div id="confirmationPage" class="confirmation-page">
+            <div class="confirmation-icon">✓</div>
+            <h2>Registration Successful!</h2>
+            <p class="confirmation-message">
+                Thank you for joining CodeCraft Academy. Your account has been successfully created.
+                We've sent a confirmation email to your address. Please verify your email to complete the registration process.
+            </p>
+            
+            <div class="user-details" id="userDetailsSummary">
+                <!-- Filled dynamically by JavaScript -->
+            </div>
+            
+            <button id="backToForm" class="btn btn-primary back-to-form">Back to Registration</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
